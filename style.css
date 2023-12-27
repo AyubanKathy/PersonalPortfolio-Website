@@ -1,0 +1,752 @@
+@font-face {
+	font-family: 'Countryside';
+	src: url(Countryside-YdKj.ttf);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	transition: 0.6s;
+}
+
+.container{
+	display: block;
+}
+
+/*Sidebar Navigation*/
+.toggle{
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: antiquewhite;
+	color: #eeb5ae;
+	z-index: 1000;
+}
+
+#btn{
+	font-size: 30px;
+	padding: 12px;
+}
+
+.sidebar{
+	position: absolute;
+	position: fixed;
+	top: 0%;
+	right: 0%;
+	width: 20%;
+	height: 100%;
+	display: flex;
+	padding: 60px;
+	background: antiquewhite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	z-index: 100;
+	right: -100%;
+}
+
+.sidebar.active{
+	right: 0;
+}
+
+.sidebar nav{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	scroll-behavior:smooth;
+}
+
+.sidebar nav li{
+	list-style: none;
+}
+
+.sidebar nav li a{
+	color: #eeb5ae;
+	font-family: Agency FB;
+	line-height: 65px;
+	text-decoration: none;
+	font-size: 2em;
+	margin: 10px 0;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+.sidebar nav li:hover a{
+	padding-left: 10px;
+	color: gray;
+}
+
+/*Header*/
+header{
+	background-image: url("kath1.jpg");
+	transition: 0.6s;
+	min-height: 300px;
+	background-size: cover;
+	background-position: center;
+}
+
+.title{
+	position: absolute;
+	top: 27%;
+	left: 50%;
+	letter-spacing: 2px;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	border: 10px solid antiquewhite;
+	background-color: #eeb5ae;
+	padding: 5px;
+}
+
+.title h1{
+	position: flexbox;
+	font-family: 'Countryside', sans-serif;
+	font-size: 35px;
+	color: aliceblue;
+}
+
+/*About*/
+.about{
+	min-height: 400px;
+}
+
+.about h1{
+	font-family: 'Countryside', sans-serif;
+	letter-spacing: 2px;
+	font-size: 55px;
+	font-weight: bold;
+	color: #eeb5ae;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.name{
+	font-family: Goudy Stout;
+	color: rgb(161, 153, 153);
+	text-align: center;
+	margin-top: 18px;
+}
+
+.images .imag1{
+	position: flex;
+	width: 20%;
+	margin: 20px;
+	margin-left: 80px;
+}
+
+.images .imag2{
+	position: flex;
+	width: 20%;
+	margin: 30px;
+	margin-left: 5px;
+}
+
+article{
+	position: absolute;
+	top: 70%;
+	display:inline;
+	border: 1px solid #eeb5ae;
+	width: 45%;
+	left: 50%;
+}
+
+article p {	
+	font-family: Agency FB;
+	font-size: 1.5em;
+	padding: 15px;
+}
+
+/*Project*/
+.project{
+	background-color: #eeb5ae;
+	min-height: 1050px;
+}
+
+.proj{
+	font-family: 'Countryside', sans-serif;
+	font-size: 65px;
+	background-image: url(alvaro-reyes-qWwpHwip31M-unsplash.jpg);
+	background-size: cover;
+	color: aliceblue;
+	text-align: center;
+	min-height: 170px;
+	padding-top: 80px;
+}
+
+.todo:hover, .calcu:hover, .images .imag1:hover, .images .imag2:hover, .first img:hover, .second img:hover,
+.third img:hover {
+	transform: scale(1.1);
+}
+
+.first, .second, .third, .todo, .calcu{
+	position:relative;
+}
+
+.first img{
+	position: absolute;
+	width: 20%;
+	margin: 10px;
+	margin-left: 4%;
+}
+
+.first p{
+	position: absolute;
+	top: 30vw;
+	font-family: Agency FB;
+	color: aliceblue;
+	font-size: 18px;
+	border: 1px solid aliceblue;
+	width: 16%;
+	margin-left: 5%;
+	padding: 15px;
+}
+
+.second img{
+	position:absolute;
+	width: 20%;
+	margin: 10px;
+	margin-left: 35%;
+}
+
+.second p {
+	position: absolute;
+	top: 30vw;
+	font-family: Agency FB;
+	color: aliceblue;
+	font-size: 18px;
+	border: 1px solid aliceblue;
+	width: 16%;
+	margin-left: 36%;
+	padding: 15px;
+}
+
+.third img{
+	position: flex;
+	width: 25%;
+	margin: 10px;
+	margin-left: 68%;
+	margin-top: 5%;
+}
+
+.third p{
+	position: absolute;
+	top: 30vw;
+	font-family: Agency FB;
+	color: aliceblue;
+	font-size: 18px;
+	border: 1px solid aliceblue;
+	width: 16%;
+	margin-left: 71%;
+	padding: 15px;
+}
+
+.project .popup-img{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	height: 100%;
+	width: 100%;
+	z-index: 1000;
+	display: none;
+}
+
+.project .popup-img span{
+	position: absolute;
+	top: 10px;
+	right: 30px;
+	font-size: 40px;
+	font-weight: bold;
+	color: azure;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.project .popup-img img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 5px solid aliceblue;
+	border-radius: 5px;
+	width: 450px;
+	object-fit: cover;
+}
+
+.work{
+	flex-direction: row;
+}
+
+.todo{
+	position: absolute;
+	border: 1px solid aliceblue;
+	width: 20%;
+	margin-top: 15%;
+	margin-left: 20%;
+	padding: 10px;
+}
+
+.todo h2{
+	font-family: Tahoma;
+	font-size: 2vw;
+	color: aliceblue;
+}
+
+.todo p{
+	font-family: Agency FB;
+	font-size: 18px;
+	color: aliceblue;
+}
+
+.calcu{
+	position: absolute;
+	border: 1px solid aliceblue;
+	width: 30%;
+	margin-top: 15%;
+	margin-left: 50%;
+	padding: 10px;
+}
+
+.calcu h2{
+	font-family: Tahoma;
+	font-size: 2vw;
+	color: aliceblue;
+}
+
+.calcu p{
+	font-family: Agency FB;
+	font-size: 18px;
+	color: aliceblue;
+}
+
+.calcu button, .todo button{
+	width: 30%;
+	height: 20%;
+	background-color: antiquewhite;
+}
+
+.calcu button a, .todo button a{
+	font-family: Tahoma;
+	text-decoration: none;
+	color: black;
+}
+
+/*Contact*/
+.contact{
+	min-height: 720px;
+}
+
+.contact h1{
+	font-family: 'Countryside', sans-serif;
+	font-size: 65px;
+	font-weight: bold;
+	background-image: url(firmbee-com-SpVHcbuKi6E-unsplash.jpg);
+	background-size: cover;
+	color: aliceblue;
+	text-align: center;
+	min-height: 170px;
+	padding-top: 80px;
+}
+
+.contact h3{
+	font-family: Tahoma;
+	width: 60%;
+	text-align: center;
+	margin-top: 2%;
+	margin-left: 20%;
+}
+
+.pic1{
+	position: absolute;
+	margin-left: 15%;
+	margin-top: 5%;
+	width: 15%;
+}
+
+.info{
+	position: absolute;
+	margin-left: 33%;
+	margin-top: 8%;
+}
+
+.info p{
+	font-family: Tahoma;
+	margin-top: 8%;
+}
+
+form{
+	width: 35%;
+	margin-top: 3%;
+	margin-left: 55%;
+	padding: 10px;
+}
+
+label{
+	font-family: Agency FB;
+	font-weight: bold;
+	font-size: 18px;
+	display: block;
+	margin-top: 1em;
+}
+
+label:first-of-type{
+	margin-top: 0;
+}
+
+input{
+	font-family: Tahoma;
+	padding: .5em;
+	border: 1px solid #999;
+}
+
+input[type="email"], input[type="text"] {
+	position: absolute;
+	width: 15em;
+}
+
+textarea {
+	font-family: Tahoma;
+	min-height: 7em;
+	min-width: 55%;
+	padding: .5em;
+	border: 1px solid #999;
+}
+
+button[type="submit"]{
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 18px;
+	width: 20%;
+	height: 30%;
+}
+
+
+/*Footer*/
+footer{
+	min-height: 200px;
+	background-color: rgb(161, 153, 153);
+}
+
+.back{
+	background-color: antiquewhite;
+	min-height: 80px;
+}
+
+.back h3{
+	margin-left: 45%;
+	font-family: Tahoma;
+	padding-top: 18px;
+}
+
+.back h3 a{
+	text-decoration: none;
+	color: gray;
+}
+
+.links{
+	position: absolute;
+	display: flex;
+	font-family: Agency FB;
+	margin-left: 60%;
+	font-size: 25px;
+	margin-top: 3%;
+}
+
+.links a{
+	text-decoration: none;
+	color: aliceblue;
+	opacity: 70%;
+	margin-left: 9px;
+}
+
+.auth{
+	font-family: Agency FB;
+	color: aliceblue;
+	opacity: 70%;
+	font-size: 20px;
+	margin-left: 25%;
+	position: absolute;
+	margin-top: 2%;
+}
+
+.copyright{
+	font-family: Tahoma;
+	font-size: 9px;
+	margin-top: 6%;
+	text-align: center;
+}
+
+.error{
+	font-family: Tahoma;
+	font-size: 14px;
+	color: red;
+}
+
+@media screen and (max-width: 600px) {
+	header{
+		background-image: url("akath.jpg");
+		transition: 0.6s;
+		display: fixed;
+		min-height: 250px;	
+	}
+
+	.sidebar nav li a{
+		font-size: 13px;
+		text-align: left;
+		line-height: 50px;
+		letter-spacing: 1px;
+	}
+
+	.sidebar nav li:hover a {
+		padding-left: 5px;
+	}	
+
+	.title{
+		position: absolute;
+		top: 20%;
+		padding: 8px;
+	}
+
+	.title h1{
+		font-size: 3vw;
+	}
+
+	.about{
+		min-height: 680px;
+		display: fixed;
+	}
+
+	.about h1 {
+		font-family: 'Countryside', sans-serif;
+		letter-spacing: 3px;
+		font-size: 50px;
+		color: #eeb5ae;
+		text-align: center;
+		margin-top: 40px;
+	}
+
+	.images .imag1{
+		position: flex;
+		width: 35%;
+		margin: 8px;
+		margin-left: 10vw;
+	}
+	
+	.images .imag2{
+		position: flex;
+		width: 35%;
+		margin: 8px;
+		margin-left: 7vw;
+	}
+
+	article{
+		top: auto;
+		bottom: auto;
+		border: 1px solid #eeb5ae;
+		width: 85%;
+		left: 8vw;
+	}
+
+	article p {
+		font-size: 11px;
+	}
+
+	.project{
+		background-color: #eeb5ae;
+		min-height: 1250px;
+	}
+
+	.todo:hover, .calcu:hover, .images .imag1:hover, .images .imag2:hover,
+	.first img:hover, .second img:hover, .third img:hover {
+		transform: scale(1.1);
+	}
+
+	.proj{
+		font-size: 55px;
+	}
+
+	.first img{
+		position: relative;
+		margin-left: 5%;
+		width: 40%;
+	}
+
+	.first p{
+		display:inline-flex;
+		font-size: 11px;
+		margin-left: 47%;
+		margin-top: -10%;
+		width: 40%;
+	}
+
+	.second img{
+		position: relative;
+		margin-left: 5%;
+		width: 40%;
+	}
+
+	.second p{
+		display:inline-flex;
+		font-size: 11px;
+		margin-left: 47%;
+		margin-top: -16%;
+		width: 40%;
+	}
+
+	.third img{
+		position: relative;
+		margin-left: 5%;
+		width: 40%;
+	}
+
+	.third p{
+		display:inline-flex;
+		font-size: 11px;
+		margin-left: 47%;
+		margin-top: -23%;
+		width: 40%;
+	}
+
+	.project .popup-img img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 5px solid aliceblue;
+		border-radius: 5px;
+		width: 300px;
+		object-fit: cover;
+	}
+
+	.work{
+		margin-top: 6vw;
+	}
+
+	.todo{
+		position: absolute;
+		flex-direction: row;
+		border: 1px solid aliceblue;
+		width: 35vw;
+		height: auto;
+		margin-top: 3%;
+		margin-left: 6%;
+		padding: 10px;
+	}
+
+	.todo h2{
+		font-size: 4vw;
+	}
+
+	.todo p{
+		font-size: 11px;
+	}
+
+	.todo button{
+		margin-top: 15px;
+		width: 70%;
+	}
+
+	.calcu{
+		position: absolute;
+		flex-direction: row;
+		border: 1px solid aliceblue;
+		width: 41vw;
+		height: auto;
+		margin-top: 3%;
+		margin-right: 4%;
+		padding: 10px;
+	}
+
+	.calcu h2{
+		font-size: 4vw;
+	}
+
+	.calcu p{
+		font-size: 11px;
+	}
+
+	.calcu button{
+		margin-top: 1px;
+		width: 70%;
+	}
+
+	.contact{
+		min-height: 900px;
+	}
+
+	.pic1{
+		position: absolute;
+		margin-left: 5%;
+		margin-top: 5%;
+		width: 35%;
+	}
+
+	.info{
+		position: absolute;
+		margin-left: 42%;
+		margin-top: 6%;
+	}
+
+	form{
+		width: 50%;
+		margin-top: 60%;
+		margin-left: 10%;
+		padding: 10px;
+	}
+
+	label{
+		font-size: 16px;
+	}
+
+	textarea {
+		width: 140%;
+		font-family: Tahoma;
+	}
+
+	button[type="submit"]{
+		font-family: Tahoma;
+		background-color: #eeb5ae;
+		color: aliceblue;
+		font-weight: bold;
+		font-size: 18px;
+		width: 50%;
+		height: 30%;
+	}
+
+	footer{
+		min-height: 230px;
+		background-color: rgb(161, 153, 153);
+	}
+
+	.back h3 a{
+		font-family: Tahoma;
+		text-decoration:none;
+		color: gray;
+		margin-left: -30%;
+		margin-top: 5%;
+	}
+
+	.links{
+		color: white;
+		margin-left: 45%;
+		font-size: 16px;
+		margin-top: 15%;
+	}
+
+	.auth{
+		font-family: Agency FB;
+		font-size: 14px;
+		text-align: center;
+		margin-top: 3%;
+		margin-left: 20%;
+	}
+
+	.copyright{
+		margin-top: 20%;
+	}
+	
+}

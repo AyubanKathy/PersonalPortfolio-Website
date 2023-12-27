@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website by Kathrine</title>
+    <link rel="Stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!--This is the main section, which divides into three sections: 'About', 'Projects' and a 'Contact'.-->
+    <main id="home">
+        <div class="toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars" id="btn"></i>
+        </div>
+
+        <div class="sidebar">
+            <nav>
+                <li><a href="#home" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()"><i class="fa-solid fa-user"></i> About Me</a></li>
+                <li><a href="#project" onclick="toggleMenu()"><i class="fa fa-th"></i> Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()"><i class="fa-regular fa-address-book"></i> Contact</a></li>
+            </nav>
+        </div>
+
+        <header>
+            <div class="title">       
+                <h1>Welcome to my Website!</h1>
+            </div>
+        </header>
+
+        <!--This is the 'About' section-->
+        <section class="about" id="about">
+            <h1>About Myself</h1>
+            <h3 class="name">Kathrine Mae Ayuban</h3>
+            <div class="images">
+                <img class="imag1" src="kathy.jpg" />
+                <img class="imag2" src="kath.jpeg"/> 
+            </div>
+            <article>
+                <p>Hi! I am Kathrine Mae Quileopas-Ayuban, a 3rd year student, and I am currently taking BS Information Technology 
+                    from Bohol Island State University - Balilihan Campus. <br> <br> I am interested in singing and dancing, but I am not confident in 
+                    showing that talent of mine. I am also interested in photo editing—basic editing, actually. I got interested because of our 
+                    subject, 'Graphics, Design, and Animation', but as a beginner, I am still learning what to do, and how to make a design that 
+                    is applicable for every occasion, like weddings, birthdays, and many more. I learned to study web development, and I like it, 
+                    but somehow it frustrates me because WebDev doesn't like me, and it's okay, I am willing to explore not only Web Development 
+                    and photo editing but also many things.    
+                </p>
+            </article>
+        </section>
+
+        <!--This is the 'Project' section-->
+        <section class="project" id="project">
+            <h1 class="proj">P r o j e c t s</h1>
+            <h2 class="name">MY WORKS</h2>
+            
+            <div class="first" onclick="clickImage()">
+                <div class="image"><img src="BSIT-2A-Group10.jpg"/></div>
+                <p>This is my midterm project for 'Graphics, Design and Animation' that I personally made.</p>
+            </div>
+
+            <div class="second" onclick="clickImage()">
+                <div class="image"><img src="AYUBAN-FINAL.jpg"/></div>
+                <p class="desc1">This project is my final examination, and since I have a limited time to finish it, I don't think
+                    I can finish it perfectly, but at least it turned out fine.</p>
+            </div>
+
+            <div class="third" onclick="clickImage()">
+                <div class="image"><img src="Deped(1).png"/></div>
+                <p>This project is my personal creation. One of my neighbors asked me to make this design for her students, 
+                    whom they recognized for their hardwork.</p>
+            </div>
+
+            <div class="popup-img">
+                <span>&times;</span>
+                <img src="BSIT-2A-Group10.jpg" alt=""/>
+            </div>
+
+            <div class="work">
+                <div class="todo">
+                    <h2><i class="fa-solid fa-thumbtack fa-bounce"></i> TO-DO LIST</h2>
+                    <p>This is my final project in one of my subjects when I was in senior high.</p>
+                    <button><a href="https://ayubankathy.github.io/todo_list/">CLICK ME!</a></button>
+                </div>
+
+                <div class="calcu">
+                    <h2><i class="fa-solid fa-thumbtack fa-bounce"></i> CALCULATOR</h2>
+                    <p>This is a 4-function operation calculator. I made this during the pandemic. Thanks to Google and YouTube.</p>
+                    <button><a href="https://ayubankathy.github.io/calculator/">CLICK ME!</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!--This is the 'Contact' section-->
+        <section class="contact" id="contact">
+            <h1>C o n t a c t</h1>
+            <h3>Any questions or remarks? Just write me a message!</h3>
+            <img class="pic1" src="brian-patrick-tagalog-axwRgfER-sA-unsplash.jpg"/>
+
+            <div class="info">
+            <p><i class="fa-solid fa-location-dot"></i>  Dauis, Bohol</p>
+            <p><i class="fa-solid fa-phone"></i>  0977-620-9921</p>
+            <p><i class="fa-solid fa-envelope"></i>  kathquileopas@gmail.com</p>
+            <p><i class="fa-brands fa-square-facebook"></i>  Kathrine Mae Quileopas-Ayuban</p>
+            </div>
+
+            <div class="form1">
+                <form action="/" method="GET">
+                    <label for="names">Name</label>
+                    <input type="text" id="names" name="names" placeholder="Enter your name" ><br><br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" ><br><br>
+                    <label for="message">Message</label>
+                    <textarea id="msg" name="msg" placeholder="Message" ></textarea><br>
+                    <br>
+                    <p class="error" id="errorMessage" hidden></p>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="back">     
+                <h3><a href="#home"><i class="fa-solid fa-arrow-up"></i> BACK TO THE TOP</a></h3>
+            </div>  
+
+            <p class="auth"><b>Author:</b> Kathrine Mae Q. Ayuban <br> <b>Course, Year & Section:</b> BS Information Technology 3A</p>
+
+            <div class="links">
+                <a href="https://www.instagram.com/kthrnmybn/?fbclid=IwAR2a1UKxUBq4f17h4_dzcXlsNrDjIqs3Ux-UHH-4rR4MW4ehvibbz6yT9uU"><i class="fa-brands fa-instagram"></i> </a><br>
+                <a href="https://web.facebook.com/kathrinemae.quileopasayuban"><i class="fa-brands fa-facebook"></i> </a>
+            </div>
+            
+            <p class="copyright">Copyright © 2023. All Right Reserved.</p> 
+        </footer>
+    </main>
+</body>
+</html>
